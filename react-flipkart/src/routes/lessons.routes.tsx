@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { MyNavbar } from "../components/navbar/MyNavbar.com";
+import { Lessons } from "../pages/lessons/Lessons.page";
 
 
 export let LessonsRoutes={
@@ -8,7 +9,7 @@ export let LessonsRoutes={
     children:[
         {
             path:'all',
-            element:<h1>im home page</h1>
+            element:<Lessons/>
         },
         {
             path:'login',
