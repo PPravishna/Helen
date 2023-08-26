@@ -18,6 +18,9 @@ import { Pagination } from '@mui/material';
 import { PropsConcept } from '../../components/props/PropsConcept.com';
 import { HookIntro } from '../../components/hookes/HookIntro.com';
 import { Css_Container } from '../../components/5-ways-of-css/Css_Container.com';
+import { MyEvent } from '../../components/events/MyEvents.com';
+import { MyCondition } from '../../components/conditions/MyCondition.com';
+import { MyForm } from '../../components/forms/MyForm.com';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -65,10 +68,13 @@ export const Lessons:React.FC<{}>=()=> {
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
           <Tab label="Fragments"  />
           <Tab label="Components" />
-          <Tab label="Props"/>
+          <Tab label="Props" />
           <Tab label="Hookes"/>
           <Tab label="Strict-mode"/>
           <Tab label="5-Ways-of-css"/>
+          <Tab label="Events"  />
+          <Tab label="Condition"  />
+          <Tab label="forms-formic"  />
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
@@ -133,7 +139,21 @@ export const Lessons:React.FC<{}>=()=> {
       <CustomTabPanel value={value} index={5}>
         <h1>Different ways of CSS in React</h1>
         <Css_Container/>
-       
+      </CustomTabPanel>
+
+      <CustomTabPanel value={value} index={6}>
+        <h1>Events</h1>
+        <MyEvent/>
+      </CustomTabPanel>
+
+      <CustomTabPanel value={value} index={7}>
+        <h1>Conditions</h1>
+        <MyCondition/>
+      </CustomTabPanel>
+
+      <CustomTabPanel value={value} index={8}>
+        <h1>Formik Form</h1>
+        <MyForm/>
       </CustomTabPanel>
 
 
